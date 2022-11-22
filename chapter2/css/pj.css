@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 50vh;
+  background: #a8c0ff;
+  background: linear-gradient(to right, #3f2b96, #a8c0ff);
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  width: 30%;
+  background: #fff;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-15%, -50%);
+  opacity: 0.8;
+  transition: all 0.3s linear;
+}
+
+.img {
+  width: 30%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translate(15%, -50%);
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s linear;
+}
+
+.card button {
+  padding: 10px;
+  width: 50%;
+  background: #3f2b96;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+.card h1,
+p,
+button {
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.card:hover h1 {
+  opacity: 1;
+  transition: all 0.3s 0s linear;
+}
+.card:hover p {
+  opacity: 1;
+  transition: all 0.3s 0.8s linear;
+}
+.card:hover button {
+  opacity: 1;
+  transition: all 0.3s 1.5s linear;
+}
+
+.card button:hover {
+  background: #fff;
+  color: #3f2b96;
+  margin-bottom: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.card button:active {
+  background: #3f2b96;
+  color: #fff;
+}

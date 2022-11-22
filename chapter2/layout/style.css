@@ -1,0 +1,43 @@
+.div1,
+.div2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fea43a;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+.div2 {
+  background-color: #aec13a;
+  transform: translate(50%, -50%);
+}
+.div1:hover {
+  z-index: 999999999999;
+  width: 150px;
+  height: 150px;
+  background-color: #ebd13baa;
+}
+.div2:hover {
+  width: 150px;
+  height: 150px;
+  background-color: #ff0000;
+  transform: translate(0%, -50%);
+  z-index: 99999999999999999999999999;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50vh;
+  background-color: #999;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bx1,
+.bx2 {
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
