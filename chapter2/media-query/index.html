@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>LOGO</h1>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="links">
+        <div class="link">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+          <a href="">Blog</a>
+        </div>
+        <div class="buttons">
+          <button>Sign In</button>
+          <button>Sign Up</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const ham = document.querySelector(".hamburger");
+      const links = document.querySelector(".links");
+      const span = document.querySelectorAll("span");
+
+      ham.addEventListener("click", () => {
+        links.classList.toggle("active");
+        span[0].classList.toggle("active-1");
+        span[1].classList.toggle("active-2");
+        span[2].classList.toggle("active-3");
+      });
+    </script>
+  </body>
+</html>

@@ -78,6 +78,7 @@ body {
   gap: 10px;
   margin-top: auto;
   position: relative;
+  margin-top: 20px;
 }
 
 .avatar::before {
@@ -121,4 +122,17 @@ body {
 .avatar p span:hover {
   color: #00fff7;
   cursor: pointer;
+}
+
+@media (max-width: 830px) {
+  .container {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 80%;
+    height: 70%;
+  }
 }
