@@ -1,0 +1,214 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 80px;
+  background: hsl(217, 28%, 15%);
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar img {
+  width: 30%;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+  margin-left: auto;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  .navbar {
+    padding: 0 60px;
+  }
+  .navbar img {
+    width: 20%;
+  }
+
+  .links {
+    width: 35%;
+    gap: 25px;
+  }
+
+  .links a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 850px) {
+  .navbar {
+    padding: 0 100px;
+  }
+  .navbar img {
+    width: 15%;
+  }
+
+  .links {
+    width: 30%;
+    gap: 25px;
+  }
+
+  .links a {
+    font-size: 23px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+  background: hsl(217, 28%, 15%);
+  gap: 20px;
+  background-image: url(images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: contain;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.content h1 {
+  font-size: 20px;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.content button {
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px 25px;
+  cursor: pointer;
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  color: #fff;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+}
+
+@media (min-width: 913px) {
+  .header {
+    width: 100%;
+    background-image: url(images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: contain;
+  }
+
+  .header img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .content h1 {
+    font-size: 2.4rem;
+  }
+
+  .content p {
+    font-size: 18px;
+    line-height: 1.6rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.about {
+  display: grid;
+  grid-template-columns: 100%;
+  /* justify-content: center; */
+  height: 100%;
+  gap: 10px;
+  padding: 50px;
+  background: hsl(218, 28%, 13%);
+  color: #fff;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.card img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.card h1 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-top: 15px;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 80px 15px;
+  }
+  .card {
+    padding: 10px;
+  }
+  .card img {
+    width: 20%;
+  }
+  .card h1 {
+    font-size: 1.5rem;
+  }
+  .card p {
+    font-size: 16px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .card p {
+    font-size: 16px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
