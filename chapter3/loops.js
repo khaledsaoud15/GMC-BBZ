@@ -86,7 +86,7 @@ const letter = "khaled";
 
 // function calcEven(num) {
 //   for (let i = 1; i < num; i++) {
-//     if (i % 2 === 0) {
+//     if (i % 2 == 0) {
 //       console.log(i);
 //     }
 //   }
@@ -123,7 +123,7 @@ var isAnagram = function (test, original) {
   return false;
 };
 
-// console.log(isAnagram("dumble", "bumble"));
+// console.log(isAnagram("kirdun", "dunKir"));
 
 // #1 — Print the ODD numbers from 7 to 31
 // #2 — Iterate through all numbers from 1 to 45. Print the following:
@@ -131,3 +131,31 @@ var isAnagram = function (test, original) {
 // For multiples of 3 print “Fizz”
 // For multiples of 5 print “Buzz”
 // For multiples of 3 and 5 print “FizzBuzz”
+
+// test case ex1 => --- 9 % 2 !== 0 ===output => 1 (1!=0)
+
+// test case ex2 => --- 3 %3 === 0 output => ("Fizz")
+// test case ex2 => --- 10 % 5 === 0 output => ("buzz")
+// test case ex2 => --- 15 % 5 && 15 % 3 === 0 output => ("FizzBuzz")
+
+// function caclOdd(index, num) {
+//   for (i = index; i <= num; i++) {
+//     if (i % 2 !== 0) console.log(i);
+//   }
+// }
+
+// caclOdd(7, 31);
+
+function fizzBuzz(num) {
+  for (let i = 0; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log(i, "FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log(i, "buzz");
+    } else if (i % 5 === 0) {
+      console.log(i, "fizz");
+    }
+  }
+}
+
+fizzBuzz(45);
