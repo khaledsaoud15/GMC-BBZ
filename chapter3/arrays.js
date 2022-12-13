@@ -1,24 +1,24 @@
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-arr.push(1);
-arr.push(2); //add element to the last place of the array
-console.log(arr);
+/*const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// arr.push(1);
+// arr.push(2); //add element to the last place of the array
+// console.log(arr);
 
-//removes the last element from the array
-const removedElement = arr.pop();
-console.log(removedElement);
-console.log(arr);
+// //removes the last element from the array
+// const removedElement = arr.pop();
+// console.log(removedElement);
+// console.log(arr);
 
-arr.unshift(5); // adds the elemnt in the start of the array
-arr.unshift(9);
-console.log(arr);
+// arr.unshift(5); // adds the elemnt in the start of the array
+// arr.unshift(9);
+// console.log(arr);
 
-const removedFirstElement = arr.shift(); //removes the first in the array
-console.log(removedFirstElement);
-console.log(arr);
+// const removedFirstElement = arr.shift(); //removes the first in the array
+// console.log(removedFirstElement);
+// console.log(arr);
 
-console.log(arr[0]);
-console.log(arr[Math.floor(arr.length / 2)]);
-console.log(arr[arr.length - 1]);
+// console.log(arr[0]);
+// console.log(arr[Math.floor(arr.length / 2)]);
+// console.log(arr[arr.length - 1]);
 
 //   1. Declare an *empty* array;
 // 2. Declare an array with more than 5 number of elements
@@ -44,10 +44,10 @@ console.log(arr[arr.length - 1]);
 // 22. Remove the last IT company from the array
 // 23. Remove all IT companies
 
-const mixedDataType = [1, "str", [1, 2], { name: "khaled" }, undefined, true];
+// const mixedDataType = [1, "str", [1, 2], { name: "khaled" }, undefined, true];
 
-console.log(mixedDataType);
-console.log(mixedDataType.length);
+// console.log(mixedDataType);
+// console.log(mixedDataType.length);
 
 const itCompanies = [
   "Facebook",
@@ -59,42 +59,111 @@ const itCompanies = [
   "Apple",
 ];
 
+// console.log(itCompanies);
+// console.log(itCompanies.length);
+// console.log(itCompanies[0]);
+// console.log(itCompanies[Math.floor(itCompanies.length / 2)]);
+// console.log(itCompanies[itCompanies.length - 1]);
+
+// function checkCompany(company) {
+//   if (itCompanies.includes(company)) {
+//     return company;
+//   }
+//   return "company not found";
+// }
+// console.log("\n");
+
+// console.log(checkCompany("Microsoft"));
+// console.log(checkCompany("Hamoud"));
+
+// function chckDoubleO() {
+//   let copy = [];
+//   for (let i = 0; i < itCompanies.length; i++) {
+//     let count = 0;
+//     for (let j = 0; j < itCompanies[i].length; j++) {
+//       if (itCompanies[i][j] === "o") {
+//         count++;
+//       }
+//     }
+//     if (count > 1) {
+//       copy.push(itCompanies[i]);
+//     }
+//   }
+//   return copy;
+// }
+
+// console.log(chckDoubleO());
+
+// console.log(itCompanies.sort());
+// console.log(itCompanies.reverse());
+// console.log(itCompanies.slice(3));
+// console.log(itCompanies.slice(0, 4));
+
 console.log(itCompanies);
-console.log(itCompanies.length);
-console.log(itCompanies[0]);
-console.log(itCompanies[Math.floor(itCompanies.length / 2)]);
-console.log(itCompanies[itCompanies.length - 1]);
 
-function checkCompany(company) {
-  if (itCompanies.includes(company)) {
-    return company;
+function removeMiddleCompany(company) {
+  for (let i = Math.floor(company.length / 2); i < company.length; i++) {
+    company[i] = company[i + 1];
+    if (i === company.length - 1) {
+      company.length = company.length - 1;
+    }
   }
-  return "company not found";
+  return company;
 }
-console.log("\n");
 
-console.log(checkCompany("Microsoft"));
-console.log(checkCompany("Hamoud"));
+console.log(removeMiddleCompany(itCompanies));
 
-function chckDoubleO() {
-  let copy = [];
-  for (let i = 0; i < itCompanies.length; i++) {
-    let count = 0;
-    for (let j = 0; j < itCompanies[i].length; j++) {
-      if (itCompanies[i][j] === "o") {
-        count++;
+function removeLastCompany(company) {
+  for (let i = company.length - 1; i < company.length; i++) {
+    company[i] = company[i + 1];
+    if (i === company.length - 1) {
+      company.length = company.length - 1;
+    }
+  }
+  return company;
+}
+
+console.log(removeLastCompany(itCompanies));
+
+itCompanies.length = 0;
+console.log(itCompanies);
+
+// -Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+
+function dashEven(input) {
+  let impres = [];
+  let impCtr = input.toString().split("");
+  for (let i = 0; i < impCtr.length; i++) {
+    impres.push(impCtr[i]);
+    if (parseInt(impCtr[i]) % 2 === 0 && parseInt(impCtr[i + 1]) % 2 === 0) {
+      impres.push("-");
+    }
+  }
+  return impres.join("");
+}
+console.log(dashEven(21547));
+console.log(dashEven(142547));
+console.log(dashEven(514021548554));*/
+
+// -Write a JavaScript program to find the most frequent item in the array
+
+function mostfrequent(input) {
+  let compt = 0;
+  let temp = 0;
+  let result;
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0; j < input.length; j++) {
+      if (input[i] === input[j]) {
+        compt++;
       }
     }
-    if (count > 1) {
-      copy.push(itCompanies[i]);
+    if (compt >= temp) {
+      temp = compt;
+      result = input[i];
     }
+    compt = 0;
   }
-  return copy;
+
+  return result;
 }
-
-console.log(chckDoubleO());
-
-console.log(itCompanies.sort());
-console.log(itCompanies.reverse());
-console.log(itCompanies.slice(3));
-console.log(itCompanies.slice(0, 4));
+console.log(mostfrequent([3, 3, 3, 4, 4, 4]));
