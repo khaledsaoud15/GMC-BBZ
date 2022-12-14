@@ -167,3 +167,84 @@ function mostfrequent(input) {
   return result;
 }
 console.log(mostfrequent([3, 3, 3, 4, 4, 4]));
+
+// remove all the elements after #
+// test case => input => "www.google.come#about" => output "www.google.com"
+
+// YOUCEF
+const noun = "www.google.come#about";
+function search(parag) {
+  for (i = 0; i < parag.length; i++) {
+    if (parag[i] === "#") {
+      console.log(parag.slice(0, i));
+    }
+  }
+}
+search(noun);
+
+function addNumb(input) {
+  let result = [];
+  let arr = input.split("");
+  console.log(arr);
+  for (let i = 0; i < input.length; i++) {
+    result.push(parseInt(arr[i]));
+    if (parseInt(arr[i]) + 1 !== parseInt(arr[i + 1]) && i < input.length - 1) {
+      result.push(parseInt(arr[i]) + 1);
+    }
+  }
+  return result.join("");
+}
+console.log(addNumb("12357911"));
+
+function pipeFix(numbers) {
+  const first = numbers[0];
+  const last = numbers[numbers.length - 1];
+
+  const arr = [];
+  for (let i = first; i <= last; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+console.log(pipeFix([1, 2, 3, 5, 6, 8, 9, 11]));
+
+var a = [1, 2, 4, 5, 8];
+var i = a[a.length - 1];
+
+while (a[0] < i--) {
+  console.log(i);
+  if (!a.includes(i)) {
+    var index = a.indexOf(i + 1);
+    a.splice(index, 0, i);
+  }
+}
+
+// you are a farmer you need to save your sheeps from the wolf
+// you have an array as an input but be carefull it starts from right to left
+// test case if the wof is in the position arr.length - 1 = return "Pls go away and stop eating my sheep"
+// else return "Oi! sheep number " + sheepIndex + " !You are about to be eaten by a Wolf" notice that the array starts the right
+
+function checkWolf(arr) {
+  const sheepIndex = arr.length - arr.indexOf("wolf") - 1;
+  if (sheepIndex === 0) {
+    return "Pls go away and stop eating my sheep";
+  } else {
+    return (
+      "Oi! sheep number " + sheepIndex + " !You are about to be eaten by a Wolf"
+    );
+  }
+}
+
+console.log(
+  checkWolf(["sheep", "sheep", "sheep", "sheep", "sheep", "sheep", "wolf"])
+);
+console.log(
+  checkWolf(["sheep", "sheep", "sheep", "wolf", "sheep", "sheep", "sheep"])
+);
+
+function cehckVowls(vowl) {
+  return vowl.replace(/[aeoui]/gi, "");
+}
+
+console.log(cehckVowls("What are you a cOmmunist?"));
