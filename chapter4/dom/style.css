@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.plus,
+.minus {
+  padding: 10px 15px;
+  border: 1px solid #feace1;
+  background-color: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.plus:active,
+.minus:active {
+  background-color: #feace1;
+  color: #fff;
+}
