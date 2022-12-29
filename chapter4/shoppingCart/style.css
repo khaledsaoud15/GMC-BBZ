@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown p {
+  cursor: pointer;
+}
+
+.dropDownMenue {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 180%;
+  left: -50%;
+  width: 150px;
+  height: 0;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  background-color: #fff;
+  transition: all 0.4s linear;
+  opacity: 0;
+}
+
+.dropDownMenue.active {
+  height: 150px;
+  opacity: 1;
+  transition: all 0.4s linear;
+}
+
+.cart {
+  position: relative;
+}
+
+.shop {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  height: 30vh;
+  padding: 10px;
+  width: 200px;
+  left: -200%;
+  gap: 20px;
+  background-color: #ccc;
+  overflow-y: scroll;
+}
+
+.shop.active {
+  display: flex;
+}
+
+.card-shop {
+  display: flex;
+  align-items: center;
+}
+
+.card-shop img {
+  width: 30%;
+  height: 20vh;
+  object-fit: cover;
+}
+.card-shop h1 {
+  font-size: 18px;
+}
+
+.cart p {
+  position: absolute;
+  top: -50%;
+  right: 0;
+}
+
+.cart img {
+  height: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 50px;
+  justify-content: center;
+  padding: 50px;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card button {
+  width: 50%;
+  padding: 10px;
+  border-radius: 8px;
+  border-style: none;
+  background-color: aqua;
+  color: #fff;
+}
+.card img {
+  width: 100%;
+  height: 30vh;
+}
